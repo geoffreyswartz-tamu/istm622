@@ -1,0 +1,17 @@
+#CRUD QUERIES from Demo
+
+#INSERT Hash data, key customer, value 1
+HSET customer:1 FN "Etta" LN "Walker" CT "CROW AGENCY" ST "MT" ZP "59022" S1 "8085 Desert Rose Trail" S2 "" EM "Etta.Walker@gmail.com" BD "4/11/1997"
+
+#Read FN field from inserted hash 
+HGETALL customer:1 HGET customer:1 FN
+
+#Modify EM field from inserted data
+HSET customer:1 EM "Etta.Parker@email.com" 
+
+#View modified data to ensure it took effect
+HGET customer:1 EM
+
+#Delete inserted data
+DEL customer:1
+
